@@ -1,15 +1,16 @@
 const container = document.body // Document.body permet d'accèder à tous les éléments de la page web
+let taille = document.getElementById('taille').offsetHeight;
 
 //   CREATION DE LA SCENE, CAMERA, RENDU  //
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight-taille);
 document.body.appendChild(renderer.domElement)
 
 //   CREATION SCENE  //
 const scene = new THREE.Scene();
 
 //   CREATION CAMERA  //
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 200 );
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / (window.innerHeight-taille) , 0.1, 200 );
 camera.position.set(-1,0,0) ;//vu qu'on a inversé la texture il faut inverser la caméra pour regarder au début
 
 //   Contrôle de la rotation de la caméra  //
@@ -44,8 +45,9 @@ animate()
 
 //   RESIZE FENETRE QUAND ELLE CHANGE //
 function onReSize() {
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    camera.aspect = window.innerWidth/window.innerHeight
+    taille = document.getElementById('taille').offsetHeight;
+    renderer.setSize(window.innerWidth, (window.innerHeight-taille))
+    camera.aspect = window.innerWidth/(window.innerHeight-taille);
     camera.updateProjectionMatrix()
 
 }
@@ -69,13 +71,14 @@ function onClick (e) {
     // On convertit la position de la souris dans le repère de la caméra
     let mouse = new THREE.Vector2(
         (e.clientX / window.innerWidth) * 2 - 1,
-        -(e.clientY / window.innerHeight) * 2 + 1
+        -(e.clientY / (window.innerHeight+taille)) * 2 + 1
     )
     rayCaster.setFromCamera(mouse, camera)
     let intersects = rayCaster.intersectObject(sphere)
     if (intersects.length > 0) {
         console.log('Sphère touchée au point : ', intersects[0].point)
     }
+
 }
 
 container.addEventListener('click',onClick)
@@ -86,4 +89,6 @@ function onMouseMove(e){
         -(e.clientY / window.innerHeight) * 2 + 1
     )
 }
-container.addEventListener('mousemove',onMouseMove)
+
+
+
