@@ -57,3 +57,18 @@ html, body {
   margin-bottom: 0;
   list-style: none;
 }
+.tabCursus
+{
+    width:80%;
+}
+.tabCursus{
+	float:center;
+	margin-left: 30%;
+}
+a.cursus_link{
+     font-size:12px;
+     text-decoration:none;
+}
+
+a.cursus_link:visited { color: #4d4d4d; }
+a.cursus_link:link { color: #4d4d4d; }
