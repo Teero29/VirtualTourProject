@@ -131,3 +131,10 @@ h2 {
 .accordion-section .panel-default .panel-body {
     font-size: 1.2rem;
 }
+.tooltipVV{
+    background: rgb(200, 17, 17);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:10px;
+}
