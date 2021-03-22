@@ -86,9 +86,16 @@ container.addEventListener('click',onClick)
 function onMouseMove(e){
     let mouse = new THREE.Vector2(
         (e.clientX / window.innerWidth) * 2 - 1,
-        -(e.clientY / window.innerHeight) * 2 + 1
+        -(e.clientY / (window.innerHeight+taille)) * 2 + 1
     )
+    rayCaster.setFromCamera(mouse, camera)
+    let intersects =rayCaster.intersectObjects(scene.children)
+
+    intersects.forEach(function(intersect){
+        if (intersect.object.type ==='Sprite'){
+            console.log(intersect.object.name)
+        }
+    })
 }
 
-
-
+container.addEventListener('mousemove',onMouseMove)
