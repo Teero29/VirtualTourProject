@@ -57,6 +57,33 @@ html, body {
   margin-bottom: 0;
   list-style: none;
 }
+
+.welcome-screen,
+.question-screen,
+.end-screen {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	background-color: #323131;
+	/*background-image: url(../img/background.jpg);*/
+
+	background-size: cover;
+	background-position-x: center;
+}
+
+.welcome-screen {
+	flex-direction: column;
+
+}
+
+.question-screen,
+.end-screen {
+	display: none;
+}
 .tabCursus
 {
     width:80%;
