@@ -13,51 +13,79 @@ const els = {
 let questionIndex = 0;
 
 const questions = [{
-    question: 'Quelle est ton homme préféré dans la saga ?',
+    question: "Quel est ton cours préféré à l'école  ?",
     answers: [{
-        title: 'Harry Potter',
-        house: 'gryffondor'
+        title: 'Math',
+        option: 'Elec'
     }, {
-        title: 'Drago Malefoy',
-        house: 'slytherin'
+        title: 'Physique',
+        option: 'Mécanique'
     }, {
-        title: 'Ollivander',
-        house: 'ravenclaw'
+        title: 'Français',
+        option: 'None'
     }, {
-        title: 'Cédric Diggory',
-        house: 'hufflepuff'
+        title: 'Bio',
+        option: 'None'
+    }, {
+        title: 'Chimie',
+        option: 'Chimie'
     }]
 },
     {
-        question: 'Quelle est ta femme préférée dans la saga ?',
+        question: "Quelle proposition, parmis les suivantes, te correspond le plus ?",
         answers: [{
-            title: 'Hermione Granger',
-            house: 'gryffondor'
+            title: "J'aimerais gérer mon équipe d'employé",
+            option: 'Info'
         }, {
-            title: 'Bellatrix Lestrange',
-            house: 'slytherin'
+            title: "J'aimerais voyager un maximum grâce à mon travail",
+            option: 'Mine'
         }, {
-            title: 'Luna Lovegood',
-            house: 'ravenclaw'
+            title: "Je n'aime pas les responsabilités",
+            option: 'None'
         }, {
-            title: 'Nymphadora Tonks',
-            house: 'hufflepuff'
+            title: "J'aimerais participer à améliorer le futur",
+            option: 'Archi'
+        }, {
+            title:"J'aimerais comprendre les lois qui régissent notre monde",
+            option:'Mécanique'
         }]
     },
     {
-        question: 'Quel est ton animal magique favori ?',
+        question: "Qu'est ce qui attise le plus ta curiosité ?",
         answers: [{
-            title: 'Hippogriffe',
-            house: 'hufflepuff'
+            title: 'Comprendre comment construire les maisons les plus efficaces.',
+            option: 'Archi'
         }, {
-            title: 'Phénix',
-            house: 'gryffondor'
+            title: "Comprendre comment programmer un site comme celui-ci.",
+            option: 'Info'
         }, {
-            title: 'Sombral',
-            house: 'ravenclaw'
+            title: "Comprendre ce qu'il se passe comme phénomène pendant une réacion chimique.",
+            option: 'Chimie'
         }, {
-            title: 'Dragon',
-            house: 'slytherin'
+            title: "Comprendre coment fonctionne un moteur",
+            option: 'Mécanique'
+        }, {
+            title: "Comprendre comment fonctionne les petits circuits éléctriques.",
+            option: 'Elec'
+        }]
+    },
+    {
+        question: "Qu'est-ce-qui t'intérèsse le plus",
+        answers: [{
+            title: "L'économie",
+            option: 'Info'
+        }, {
+            title: "L'habitat",
+            option: 'Archi'
+        }, {
+            title: "La physique des particules",
+            option: 'Chimie'
+        }, {
+            title: "La géologie",
+            option: 'Mine'
+        }, {
+            title: "L'éléctricité",
+            option: 'Elec'
         }]
     }
 ];
@@ -88,8 +116,8 @@ const init = () => {
         if (target.tagName !== 'LI') {
             return;
         }
-        const house = target.getAttribute('data-house');
-        recordedAnswers.push(house);
+        const option = target.getAttribute('data-option');
+        recordedAnswers.push(option);
 
         questionIndex++;
 
@@ -104,20 +132,23 @@ const init = () => {
 };
 
 const calculateScore = () => {
-    const house = recordedAnswers.sort((a, b) => {
+    const option = recordedAnswers.sort((a, b) => {
         return recordedAnswers.filter(answer => answer === a).length -
             recordedAnswers.filter(answer => answer === b).length
     }).pop();
     // console.log('house', house);
 
-    const houseInFrench = {
-        slytherin: 'Serpentard',
-        hufflepuff: 'Pouffe-Souffle',
-        ravenclaw: 'Serdaigle',
-        gryffondor: 'Griffondor'
+    const options = {
+        Elec: 'Ingénieur civil Electricien',
+        Mécanique: 'Ingénieur civil Mécanicien',
+        Chimie: 'Ingénieur civil en chimie et science des matériaux',
+        Info: 'Ingénieur civil en Informatique et Gestion',
+        Mine: 'Ingénieur civil des Mines et Géologue',
+        Archi: "Ingénieur civil Architecte",
+        None: 'Aucun'
     };
 
-    els.endScreen.querySelector('span').textContent = houseInFrench[house];
+    els.endScreen.querySelector('span').textContent = options[option];
 };
 
 const displayQuestion = (index) => {
@@ -129,7 +160,7 @@ const displayQuestion = (index) => {
     const answerEls = currentQuestion.answers.map((answer) => {
         const liEl = document.createElement('li');
         liEl.textContent = answer.title;
-        liEl.setAttribute('data-house', answer.house);
+        liEl.setAttribute('data-option', answer.option);
         return liEl;
     });
 
