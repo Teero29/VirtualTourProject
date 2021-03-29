@@ -137,6 +137,14 @@ h2 {
     top: 0;
     left: 0;
     padding:10px;
+    opacity:0;
+    transform : translate3d(-50%,-110%,0);
+    transition: opacity 0.3s;
+}
+
+.isActive{
+    opacity: 1;
+
 }
 .col-lg-6 cf1,cf2{
     background-color:#A5BEE0;
