@@ -107,11 +107,15 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, (window.innerHeight-taille))
 document.body.appendChild(renderer.domElement)
 
-let s = new Scene('img/virtualTour/cour_Exterieure.jpg', camera)
+let s1 = new Scene('img/virtualTour/cour_Exterieure.jpg', camera)
 let s2 = new Scene('img/virtualTour/hallentree.jpg', camera)
-s.createScene(scene)
-s.appear()
-s.addPoints(
+let s3 = new Scene('img/virtualTour/escalier.jpg', camera)
+let s4 = new Scene('img/virtualTour/local11.jpg', camera)
+let s5 = new Scene('img/virtualTour/local12.jpg', camera)
+
+s1.createScene(scene)
+s1.appear()
+s1.addPoints(
     {position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
         scene: s2
@@ -119,18 +123,48 @@ s.addPoints(
 s2.addPoints({
     position: new THREE.Vector3(-28.558965443557415,  0.7382878215597668, 40.88628571718127),
     name: 'Sortie',
-    scene: s
+    scene: s1
 })
-s.addTooltip({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
+s2.addPoints({
+    position: new THREE.Vector3(46.40775420579729, 0.9837127374506419,  18.263764253104647),
+    name: 'Escaliers',
+    scene: s3
+})
+s3.addPoints({
+    position: new THREE.Vector3(8.523716815370259,  11.290079638582014,  47.81511272248516),
+    name: 'Local 12',
+    scene: s5
+})
+s3.addPoints({
+    position: new THREE.Vector3(-21.935812421550636,  0.5891747997154179, 44.6638081975684),
+    name: 'Hall d\' Entrée',
+    scene: s2
+})
+s4.addPoints({
+    position: new THREE.Vector3( 45.97002049373285,  13.320959272204957,  13.51609154776859),
+    name: 'Hall d\' Entrée',
+    scene: s3
+})
+s4.addPoints({
+    position: new THREE.Vector3( 46.044665405652474,  14.333466742476176, -12.400533958033517),
+    name: 'Local 12',
+    scene: s5
+})
+s5.addPoints({
+    position: new THREE.Vector3( 47.43448385728403,  6.592680442327475, 13.358996395022475),
+    name: 'Local 11',
+    scene: s4
+})
+s5.addPoints({
+    position: new THREE.Vector3( 48.45108253654374,6.137184884658702, -10.239357057104865),
+    name: 'Hall d\' Entrée',
+    scene: s3
+})
+s1.addTooltip({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
         scene: s2
     }
-)/*
-s2.addTooltip({position: new THREE.Vector3(-28.558965443557415,  0.7382878215597668, 40.88628571718127),
-        name: 'Sortie',
-        scene: s
-    }
-)*/
+)
 
 
 container.addEventListener('mousemove',onMouseMove)
@@ -169,7 +203,6 @@ function onClick (e) {
     rayCaster.setFromCamera(mouse, camera)
     let intersects = rayCaster.intersectObjects(scene.children)
     intersects.forEach(function(intersect){
-        console.log('Sphère touchée au point : ', intersects[0].point)
         if(intersect.object.type=='Sprite'){
             intersect.object.onclick()
         }
