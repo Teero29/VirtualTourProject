@@ -1,5 +1,5 @@
 const container = document.body
-const tooltip = document.querySelector('.tooltipVV')
+//const tooltip = document.querySelector('.tooltipVV')
 let tooltipActive = false
 
 let taille = document.getElementById('taille').offsetHeight;
@@ -107,11 +107,12 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, (window.innerHeight-taille))
 document.body.appendChild(renderer.domElement)
 
-let s1 = new Scene('img/virtualTour/cour_Exterieure.jpg', camera)
-let s2 = new Scene('img/virtualTour/hallentree.jpg', camera)
-let s3 = new Scene('img/virtualTour/escalier.jpg', camera)
+let s1 = new Scene('img/compressed360/cour_Exterieure.jpg', camera)
+let s2 = new Scene('img/compressed360/hallEntree.jpg', camera)
+let s3 = new Scene('img/compressed360/escalier.jpg', camera)
 let s4 = new Scene('img/virtualTour/local11.jpg', camera)
-let s5 = new Scene('img/virtualTour/local12.jpg', camera)
+let s5 = new Scene('img/compressed360/local12.jpg', camera)
+let s6 = new Scene('img/compressed360/Cour_Interieure.jpg', camera)
 
 s1.createScene(scene)
 s1.appear()
@@ -140,6 +141,11 @@ s3.addPoints({
     name: 'Hall d\' Entrée',
     scene: s2
 })
+s3.addPoints({
+    position: new THREE.Vector3( -36.87643773128256, -2.4691544956531155,  -33.311586894797664),
+    name: 'Cour Extérieure',
+    scene: s6
+})
 s4.addPoints({
     position: new THREE.Vector3( 45.97002049373285,  13.320959272204957,  13.51609154776859),
     name: 'Hall d\' Entrée',
@@ -156,11 +162,16 @@ s5.addPoints({
     scene: s4
 })
 s5.addPoints({
-    position: new THREE.Vector3( 48.45108253654374,6.137184884658702, -10.239357057104865),
+    position: new THREE.Vector3( 48.42541514796382,  6.447994653406772,  -10.165911524662192),
     name: 'Hall d\' Entrée',
     scene: s3
 })
-s1.addTooltip({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
+s6.addPoints({
+    position: new THREE.Vector3( -6.295368710372657,  -0.01430178620809927,  49.3792580929616),
+    name: 'Escaliers',
+    scene: s3
+})
+s1.addTooltip({position: new THREE.Vector3(48.30852667507038,  0.04735581481100604,  -12.155460649557858),
         name: 'Entrée',
         scene: s2
     }
@@ -202,7 +213,11 @@ function onClick (e) {
 
     rayCaster.setFromCamera(mouse, camera)
     let intersects = rayCaster.intersectObjects(scene.children)
+    if (intersects.length > 0) {
+        console.log('Sphère touchée au point : ', intersects[0].point)
+    }
     intersects.forEach(function(intersect){
+
         if(intersect.object.type=='Sprite'){
             intersect.object.onclick()
         }
@@ -225,16 +240,17 @@ function onMouseMove(e){
     intersects.forEach(function(intersect){
         if(intersect.object.type=='Sprite'){
             let p = intersect.object.position.clone().project(camera)
+            /*
             tooltip.style.top = ((-1*p.y+1)*window.innerHeight/2) + 'px'
             tooltip.style.left = ((p.x+1)*window.innerWidth/2)+'px'
             tooltip.classList.add('is-active')
-            tooltip.innerHTML = intersect.object.name
+            tooltip.innerHTML = intersect.object.name*/
             tooltipActive = true
-            foundSprite = true
+            //foundSprite = true
         }
     })
     if ((foundSprite == false && tooltipActive)){
-        tooltip.classList.remove('is-active')
+        //tooltip.classList.remove('is-active')
     }
 
 }

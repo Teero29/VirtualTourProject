@@ -132,12 +132,13 @@ h2 {
     font-size: 1.2rem;
 }
 .tooltipVV{
-    background: rgb(200, 17, 17);
+    background: rgb(0, 0, 0);
+    color: white;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 100px;
+    left: 100px;
     padding:10px;
-    opacity:0;
+    opacity:1;
     transform : translate3d(-50%,-110%,0);
     transition: opacity 0.3s;
 }
