@@ -3,20 +3,31 @@
 
 <head>
 
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
 	<title>JPO</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+					class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="nav ">
 					<li class="nav-pages">
@@ -51,114 +62,127 @@
 		</nav>
 	</header>
 	<section>
-<div id="slides" class="carousel slide" data-ride="carousel">
-<ul class="carousel-indicators">
-	<li data-target="#slides" data-slide-to="0" class="active"></li>
-	<li data-target="#slides" data-slide-to="1"></li>
-	<li data-target="#slides" data-slide-to="2"></li>
-</ul>
-<div class="carousel-inner">
-	<div class="carousel-item active">
-		<img src="img/background1.jpg">
-		<div class="carousel-caption">
-			<h1 class="display-2">Visite virtuelle</h1>
-			<h3>Découvrez votre futur campus !</h3>
-			<button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='visite_virtuelle.html'">Commencer la visite</button>
-		</div>
-	</div>
-	<div class="carousel-item">
-		<img src="img/background2.jpg">
-		<div class="carousel-caption">
-			<h1 class="display-2">Le choixpeau</h1>
-			<h3 id="a">De quelle maison faites-vous partie ?</h3>
-			<button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='choixpeau.html'">Commencer le test</button>
-		</div>
-	</div>
-	<div class="carousel-item">
-		<img src="img/background3.jpg">
-		<div class="carousel-caption">
-			<h1 class="display-2">Informations</h1>
-			<h3>Récoltez des informations</h3>
-			<button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='info_bachelier.html'">Info bachelier</button>
-			<button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='info_master.html'">Info master</button>
-		</div>
-	</div>
-</div>
-</div>
-
-<div class="container-fluid">
-<div class="row jumbotron">
-	<div class="col-xs-12 col-sm-12 col-md9 col-lg-9 col-xl-10">
-		<p class="lead">Ce site et toutes ses fonctionnalités ont été développés par une équipe d'étudiants ingénieurs civils en informatique et gestion de la faculté polytechnique de Mons.</p>
-	</div>
-</div>
-</div>
-</section>
-<section>
-	<div class="container-fluid padding" id="4">
-		<div class="row padding">
-			<div class="col-lg-6" id="cf3">
-				<h2>Où se situe la faculté ?</h2>
-				<p>Cliquer sur la map pour découvrir les lieux !</p>
-			</div>
-			<div class="col-lg-6 style="width: 100%" id="cf4">
-				<p><iframe loading="lazy" src="https://www.google.com/maps/d/embed?mid=1eKF1r58BbvHoW4hRg6OrZ1IuTqzsDgqH" width="800" height="600"></iframe></p>
+		<div id="slides" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#slides" data-slide-to="0" class="active"></li>
+				<li data-target="#slides" data-slide-to="1"></li>
+				<li data-target="#slides" data-slide-to="2"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/background1.jpg">
+					<div class="carousel-caption">
+						<h1 class="display-2">Visite virtuelle</h1>
+						<h3>Découvrez votre futur campus !</h3>
+						<button type="button" class="btn btn-outline-light btn-lg"
+							onclick="location.href='visite_virtuelle.html'">Commencer la visite</button>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/background2.jpg">
+					<div class="carousel-caption">
+						<h1 class="display-2">Le choixpeau</h1>
+						<h3 id="a">De quelle maison faites-vous partie ?</h3>
+						<button type="button" class="btn btn-outline-light btn-lg"
+							onclick="location.href='choixpeau.html'">Commencer le test</button>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/background3.jpg">
+					<div class="carousel-caption">
+						<h1 class="display-2">Informations</h1>
+						<h3>Récoltez des informations</h3>
+						<button type="button" class="btn btn-outline-light btn-lg"
+							onclick="location.href='info_bachelier.html'">Info bachelier</button>
+						<button type="button" class="btn btn-outline-light btn-lg"
+							onclick="location.href='info_master.html'">Info master</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-</section>
-<section>
-	<div class="container-fluid padding" id="3">
-		<div class="row padding">
-			<div class="col-lg-6" id="cf1">
-				<h2>Pourquoi ce site ?</h2>
-				<p>Notre but est de permettre à tous de pouvoir profiter de l'ensemble des informations dont il a besoin pour construire ses choix d'avenir.</p>
-				<p>Votre trouverez une visite virtuelle en ligne des lieux emblématiques de la faculté, de la documentation liée aux bacheliers ainsi qu'au master et des projets d'autres étudiants.</p>
-				<p>Vous pouvez également profiter du choixpeau, un questionnaire pour vous diriger vers une option spécifique à titre indicatif.</p>
-			</div>
-			<div class="col-lg-6" id="cf2">
-				<img src="img/background4.jpg" width="800" height="600" class="img-fluid">
-			</div>
-		</div>
-		</div>
-</section>
-<section>
-	<div class="container-fluid padding" id="3">
-		<div class="row padding">
-			<div class="col-lg-6" id="cf1">
-				<h2>La FEDE!</h2>
-				<p>Voir site pour plus d'infos:</p>
-				<a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">site</a>
-			</div>
-			<div class="col-lg-6" id="cf2">
-				<img src="img/Fede.png" width="400" height="300" class="img-fluid">
+	</section>
+	<section>
+		<div class="container-fluid padding" id="4">
+			<div class="row padding">
+				<div class="col-lg-6" id="cf3">
+					<h2>Où se situe la faculté ?</h2>
+					<p>Cliquer sur la map pour découvrir les lieux !</p>
+				</div>
+				<div class="col-lg-6 style=" width: 100%" id="cf4">
+					<p><iframe loading="lazy"
+							src="https://www.google.com/maps/d/embed?mid=1eKF1r58BbvHoW4hRg6OrZ1IuTqzsDgqH" width="800"
+							height="600"></iframe></p>
+				</div>
 			</div>
 		</div>
+	</section>
+	<section>
+		<div class="container-fluid padding" id="3">
+			<div class="row padding">
+				<div class="col-lg-6" id="cf1">
+					<h2>Pourquoi ce site ?</h2>
+					<p>Notre but est de permettre à tous de pouvoir profiter de l'ensemble des informations dont il a
+						besoin pour construire ses choix d'avenir.</p>
+					<p>Votre trouverez une visite virtuelle en ligne des lieux emblématiques de la faculté, de la
+						documentation liée aux bacheliers ainsi qu'au master et des projets d'autres étudiants.</p>
+					<p>Vous pouvez également profiter du choixpeau, un questionnaire pour vous diriger vers une option
+						spécifique à titre indicatif.</p>
+				</div>
+				<div class="col-lg-6" id="cf2">
+					<img src="img/background4.jpg" width="800" height="600" class="img-fluid">
+				</div>
+			</div>
 		</div>
-</section>
-<footer>
-<div class="container-fluid padding">
-<div class="row text-center">
-	<div class="col-md-6">
-		<img src="img/logo1.png">
-		<hr class="light">
-		<p> numéro du secrétariat des études de la polytech : 000-000-0000 </p>
-		<p> emailpolytech@noidea.com</p>
-		<p> la rue de la polytech </p>
-	</div>
-	<div class="col-md-6">
-		<img src="img/logo1.png" id="1">
-		<hr class="light">
-		<p> numéro du secrétariat des études de l'Umons: 000-000-0001 </p>
-		<p> emailUmons@noidea.com</p>
-		<p> la rue de le l'Umons </p>
-	</div>
-	<div class="col-12">
-		<hr class="light">
-		<h5>&copy; JPOdelapolytech.com</h5>
-	</div>
-</div>
-</div>
-</footer>
+	</section>
+	<section>
+		<div class="container-fluid padding" id="3">
+			<div class="row padding">
+				<div class="col-lg-6" id="cf1">
+					<h2>La FEDE!</h2>
+					<p>Voir site pour plus d'infos:</p>
+					<a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">site</a>
+				</div>
+				<div class="col-lg-6" id="cf2">
+					<img src="img/Fede.png" width="400" height="300" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-6">
+					<img src="img/logo1.png">
+					<hr class="light">
+					<p> numéro du secrétariat des études de la polytech : 000-000-0000 </p>
+					<p> emailpolytech@noidea.com</p>
+					<p> la rue de la polytech </p>
+				</div>
+				<div class="col-md-6">
+					<img src="img/logo1.png" id="1">
+					<hr class="light">
+					<p> numéro du secrétariat des études de l'Umons: 000-000-0001 </p>
+					<p> emailUmons@noidea.com</p>
+					<p> la rue de le l'Umons </p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<div class="row jumbotron">
+				<div class="col-xs-12 col-sm-12 col-md9 col-lg-9 col-xl-10">
+					<p class="lead">Ce site et toutes ses fonctionnalités ont été développés par une équipe
+						d'étudiants ingénieurs civils en informatique et gestion de la faculté polytechnique de
+						Mons.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-12">
+			<hr class="light">
+			<h5>&copy; JPOdelapolytech.com</h5>
+		</div>
+	</footer>
 </body>
+
 </html>
