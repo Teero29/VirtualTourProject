@@ -1,5 +1,5 @@
 const container = document.body
-//const tooltip = document.querySelector('.tooltipVV')
+const tooltip = document.querySelector('.tooltip')
 let tooltipActive = false
 
 let taille = document.getElementById('taille').offsetHeight;
@@ -38,7 +38,7 @@ class Scene{
 
     }
     addTooltip (point) {
-        let map = new THREE.TextureLoader().load( 'img/VirtualTour/info.png' );
+        let map = new THREE.TextureLoader().load( 'img/VirtualTour/arrow.png' );
         let spritematerial = new THREE.SpriteMaterial( { map: map } );
         let sprite = new THREE.Sprite( spritematerial );
         sprite.name = point.name
@@ -178,7 +178,7 @@ s1.addTooltip({position: new THREE.Vector3(48.30852667507038,  0.047355814811006
 )
 
 
-container.addEventListener('mousemove',onMouseMove)
+
 
 const controls = new THREE.OrbitControls(camera,renderer.domElement); //permet à la caméra de trourner sur son orbite
 controls.rotateSpeed = 0.2;
@@ -200,10 +200,11 @@ function onReSize() {
     camera.aspect = window.innerWidth/(window.innerHeight-taille);
     camera.updateProjectionMatrix()
 }
-window.addEventListener('resize',onReSize)
+
 
 //  MANIERE DE TROUVER COORD DE LA SPRITE //
 const rayCaster = new THREE.Raycaster()
+
 function onClick (e) {
     // On convertit la position de la souris dans le repère de la caméra
     let mouse = new THREE.Vector2(
@@ -222,11 +223,7 @@ function onClick (e) {
             intersect.object.onclick()
         }
     })
-
-
 }
-
-container.addEventListener('click',onClick)
 
 function onMouseMove(e){
     let mouse = new THREE.Vector2(
@@ -240,17 +237,19 @@ function onMouseMove(e){
     intersects.forEach(function(intersect){
         if(intersect.object.type=='Sprite'){
             let p = intersect.object.position.clone().project(camera)
-            /*
             tooltip.style.top = ((-1*p.y+1)*window.innerHeight/2) + 'px'
             tooltip.style.left = ((p.x+1)*window.innerWidth/2)+'px'
             tooltip.classList.add('is-active')
-            tooltip.innerHTML = intersect.object.name*/
+            tooltip.innerHTML = intersect.object.name
             tooltipActive = true
-            //foundSprite = true
+            foundSprite = true
         }
     })
     if ((foundSprite == false && tooltipActive)){
-        //tooltip.classList.remove('is-active')
+        tooltip.classList.remove('is-active')
     }
 
 }
+container.addEventListener('click',onClick)
+window.addEventListener('resize',onReSize)
+container.addEventListener('mousemove',onMouseMove)
