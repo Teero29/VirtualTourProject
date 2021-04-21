@@ -1,6 +1,8 @@
 const container = document.body
 const tooltip = document.querySelector('.tooltip')
+const tooltipInfo = document.querySelector('.info')
 let tooltipActive = false
+let infoActive = false
 
 let taille = document.getElementById('taille').offsetHeight;
 const scene = new THREE.Scene();
@@ -43,6 +45,8 @@ class Scene{
         let spritematerial = new THREE.SpriteMaterial( { map: map } );
         let sprite = new THREE.Sprite( spritematerial );
         sprite.name = pointsInfo.name
+        sprite.text = pointsInfo.text
+        sprite.info = true
         sprite.position.copy(pointsInfo.position.clone().normalize().multiplyScalar(30))
         sprite.scale.multiplyScalar(1.5);
         this.scene.add( sprite );
@@ -189,8 +193,8 @@ s6.addPointsArrow({
 })
 s1.addPointsInfo({
     position: new THREE.Vector3(-48.30113937876441,  -0.24861723642067776,  12.145916097017125),
-    name:'Statue',
-    text: "c'est une statue de 2 gros bg"
+    name:'Statue ' ,
+    text :'c\'est une statue de 2 gros bg',
 })
 s1.createScene(scene)
 s1.appear()
@@ -252,17 +256,31 @@ function onMouseMove(e){
     intersects.forEach(function(intersect){
         if(intersect.object.type=='Sprite'){
             let p = intersect.object.position.clone().project(camera)
-            tooltip.style.top = ((-1*p.y+1)*window.innerHeight/2) + 'px'
+            tooltip.style.top = (((-1*p.y+1)*window.innerHeight/2)) + 'px'
             tooltip.style.left = ((p.x+1)*window.innerWidth/2)+'px'
             tooltip.classList.add('is-active')
             tooltip.innerHTML = intersect.object.name
             tooltipActive = true
             foundSprite = true
+            console.log(intersect.object.info)
+
+            if(intersect.object.info == true){
+                tooltipInfo.style.top = (((-1*p.y+1)*window.innerHeight/2)+100) + 'px'
+                tooltipInfo.style.left = ((p.x+1)*window.innerWidth/2)+'px'
+                tooltipInfo.classList.add('is-active')
+                tooltipInfo.innerHTML=intersect.object.text
+                infoActive = true
+            }
         }
+
     })
     if ((foundSprite == false && tooltipActive)){
         tooltip.classList.remove('is-active')
+        if(infoActive){
+            tooltipInfo.classList.remove('is-active')
+        }
     }
+
 
 }
 container.addEventListener('click',onClick)

@@ -131,22 +131,7 @@ a.cursus_link:link { color: #4d4d4d; }
 .accordion-section .panel-default .panel-body {
     font-size: 1.2rem;
 }
-.tooltip{
-    background: rgb(0, 0, 0);
-    color: white;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    padding:10px;
-    opacity:0;
-    transform : translate3d(-50%,-110%,0);
-    transition: opacity 0.3s;
-}
 
-.tooltip.is-active{
-    opacity: 1;
-
-}
 .col-lg-6 cf1,cf2{
     background-color:#A5BEE0;
 }
