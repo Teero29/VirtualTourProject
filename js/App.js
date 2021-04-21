@@ -11,7 +11,8 @@ camera.updateProjectionMatrix()
 class Scene{
     constructor(image, camera) {
         this.image = image
-        this.points = []
+        this.pointsArrow = []
+        this.pointsInfo = []
         this.sprites =[]
         this.scene = null
         this.camera = camera
@@ -31,25 +32,42 @@ class Scene{
         material.transparent = true
         this.sphere = new THREE.Mesh( geometry, material );
         this.scene.add( this.sphere );
-        this.points.forEach(this.addTooltip.bind(this))
+        this.pointsArrow.forEach(this.addArrow.bind(this))
+        this.pointsInfo.forEach(this.addInfo.bind(this))
     }
-    addPoints (point){
-        this.points.push(point)
+    addPointsInfo(pointsInfo){
+        this.pointsInfo.push(pointsInfo)
+    }
+    addInfo(pointsInfo){
+        let map = new THREE.TextureLoader().load( 'img/VirtualTour/info.jpg' );
+        let spritematerial = new THREE.SpriteMaterial( { map: map } );
+        let sprite = new THREE.Sprite( spritematerial );
+        sprite.name = pointsInfo.name
+        sprite.position.copy(pointsInfo.position.clone().normalize().multiplyScalar(30))
+        sprite.scale.multiplyScalar(1.5);
+        this.scene.add( sprite );
+        this.sprites.push(sprite)
+        sprite.onclick =() => {
+            
+        }
+    }
+    addPointsArrow (pointsArrow){
+        this.pointsArrow.push(pointsArrow)
 
     }
-    addTooltip (point) {
+    addArrow (pointsArrow) {
         let map = new THREE.TextureLoader().load( 'img/VirtualTour/arrow.png' );
         let spritematerial = new THREE.SpriteMaterial( { map: map } );
         let sprite = new THREE.Sprite( spritematerial );
-        sprite.name = point.name
-        sprite.position.copy(point.position.clone().normalize().multiplyScalar(30))
+        sprite.name = pointsArrow.name
+        sprite.position.copy(pointsArrow.position.clone().normalize().multiplyScalar(30))
         sprite.scale.multiplyScalar(1.5);
         this.scene.add( sprite );
         this.sprites.push(sprite)
         sprite.onclick =() => {
             this.destroy()
-            point.scene.createScene(scene)
-            point.scene.appear()
+            pointsArrow.scene.createScene(scene)
+            pointsArrow.scene.appear()
         }
     }
 
@@ -114,71 +132,68 @@ let s4 = new Scene('img/virtualTour/local11.jpg', camera)
 let s5 = new Scene('img/compressed360/local12.jpg', camera)
 let s6 = new Scene('img/compressed360/Cour_Interieure.jpg', camera)
 
-s1.createScene(scene)
-s1.appear()
-s1.addPoints(
+s1.addPointsArrow(
     {position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
         scene: s2
     })
-s2.addPoints({
+s2.addPointsArrow({
     position: new THREE.Vector3(-28.558965443557415,  0.7382878215597668, 40.88628571718127),
     name: 'Sortie',
     scene: s1
 })
-s2.addPoints({
+s2.addPointsArrow({
     position: new THREE.Vector3(46.40775420579729, 0.9837127374506419,  18.263764253104647),
     name: 'Escaliers',
     scene: s3
 })
-s3.addPoints({
+s3.addPointsArrow({
     position: new THREE.Vector3(8.523716815370259,  11.290079638582014,  47.81511272248516),
     name: 'Local 12',
     scene: s5
 })
-s3.addPoints({
+s3.addPointsArrow({
     position: new THREE.Vector3(-21.935812421550636,  0.5891747997154179, 44.6638081975684),
     name: 'Hall d\' Entrée',
     scene: s2
 })
-s3.addPoints({
+s3.addPointsArrow({
     position: new THREE.Vector3( -36.87643773128256, -2.4691544956531155,  -33.311586894797664),
     name: 'Cour Extérieure',
     scene: s6
 })
-s4.addPoints({
+s4.addPointsArrow({
     position: new THREE.Vector3( 45.97002049373285,  13.320959272204957,  13.51609154776859),
     name: 'Hall d\' Entrée',
     scene: s3
 })
-s4.addPoints({
+s4.addPointsArrow({
     position: new THREE.Vector3( 46.044665405652474,  14.333466742476176, -12.400533958033517),
     name: 'Local 12',
     scene: s5
 })
-s5.addPoints({
+s5.addPointsArrow({
     position: new THREE.Vector3( 47.43448385728403,  6.592680442327475, 13.358996395022475),
     name: 'Local 11',
     scene: s4
 })
-s5.addPoints({
+s5.addPointsArrow({
     position: new THREE.Vector3( 48.42541514796382,  6.447994653406772,  -10.165911524662192),
     name: 'Hall d\' Entrée',
     scene: s3
 })
-s6.addPoints({
+s6.addPointsArrow({
     position: new THREE.Vector3( -6.295368710372657,  -0.01430178620809927,  49.3792580929616),
     name: 'Escaliers',
     scene: s3
 })
-s1.addTooltip({position: new THREE.Vector3(48.30852667507038,  0.04735581481100604,  -12.155460649557858),
-        name: 'Entrée',
-        scene: s2
-    }
-)
-
-
-
+s1.addPointsInfo({
+    position: new THREE.Vector3(-48.30113937876441,  -0.24861723642067776,  12.145916097017125),
+    name:'Statue',
+    text: "c'est une statue de 2 gros bg"
+})
+s1.createScene(scene)
+s1.appear()
 
 const controls = new THREE.OrbitControls(camera,renderer.domElement); //permet à la caméra de trourner sur son orbite
 controls.rotateSpeed = 0.2;
