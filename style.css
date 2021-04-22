@@ -96,7 +96,11 @@ a.cursus_link{
      font-size:12px;
      text-decoration:none;
 }
-
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 a.cursus_link:visited { color: #4d4d4d; }
 a.cursus_link:link { color: #4d4d4d; }
 
