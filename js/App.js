@@ -1,8 +1,9 @@
 const container = document.body
 const tooltip = document.querySelector('.tooltip')
-const tooltipInfo = document.querySelector('.info')
+const imageInfo = document.querySelector('.info')
+const imgSrc = document.getElementById('info-img')
 let tooltipActive = false
-let infoActive = false
+let imageActive = false
 
 let taille = document.getElementById('taille').offsetHeight;
 const scene = new THREE.Scene();
@@ -46,7 +47,8 @@ class Scene{
         let sprite = new THREE.Sprite( spritematerial );
         sprite.name = pointsInfo.name
         sprite.text = pointsInfo.text
-        sprite.info = true
+        sprite.img = pointsInfo.img
+        sprite.imageOk = pointsInfo.imageOk
         sprite.position.copy(pointsInfo.position.clone().normalize().multiplyScalar(30))
         sprite.scale.multiplyScalar(1.5);
         this.scene.add( sprite );
@@ -136,8 +138,7 @@ let s4 = new Scene('img/virtualTour/local11.jpg', camera)
 let s5 = new Scene('img/compressed360/local12.jpg', camera)
 let s6 = new Scene('img/compressed360/Cour_Interieure.jpg', camera)
 
-s1.addPointsArrow(
-    {position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
+s1.addPointsArrow({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
         scene: s2
     })
@@ -167,7 +168,7 @@ s3.addPointsArrow({
     scene: s6
 })
 s4.addPointsArrow({
-    position: new THREE.Vector3( 45.97002049373285,  13.320959272204957,  13.51609154776859),
+    position: new THREE.Vector3( 46.95289952246147,  13.105271262847912,  10.461195178639208),
     name: 'Hall d\' Entrée',
     scene: s3
 })
@@ -193,9 +194,35 @@ s6.addPointsArrow({
 })
 s1.addPointsInfo({
     position: new THREE.Vector3(-48.30113937876441,  -0.24861723642067776,  12.145916097017125),
-    name:'Statue ' ,
-    text :'c\'est une statue de 2 gros bg',
+    name:'Théophile Guibal et Adolphe Devillez <br>' +
+        'Les fondateurs de l\'école Provinciale des Mines du Hainaut ' +
+        '1837',
+
+    img : 'img/virtualTour/statue.jpg',
+    imageOk : true
 })
+
+s1.addPointsInfo({
+        position: new THREE.Vector3(12.852595783557476, 16.844291436181443,  44.99341771507831),
+        name: 'Localisation du local 12'
+})
+
+s1.addPointsInfo({
+    position: new THREE.Vector3(-15.739162956588117,  1.8095205782549821,  47.1313924360347),
+    name: 'Local Info'
+})
+
+s5.addPointsInfo({
+        position: new THREE.Vector3(49.5562118875878,  -3.0472573847180895, 2.9859007145358794),
+        name: 'C\'est dans ce local que les BAC1 ont la majorité de leurs cours'
+}
+)
+s6.addPointsInfo({
+    position: new THREE.Vector3(-49.33694620386791,  4.689445726455829,  4.393032089219335),
+    name: 'La bibliothèque de la Faculté <br>' + 'Un endroit calme où l\'on peut travailler ou emprunter un livre'
+
+})
+
 s1.createScene(scene)
 s1.appear()
 
@@ -262,22 +289,24 @@ function onMouseMove(e){
             tooltip.innerHTML = intersect.object.name
             tooltipActive = true
             foundSprite = true
-            console.log(intersect.object.info)
+            console.log(intersect.object.imageOk)
 
-            if(intersect.object.info == true){
-                tooltipInfo.style.top = (((-1*p.y+1)*window.innerHeight/2)+100) + 'px'
-                tooltipInfo.style.left = ((p.x+1)*window.innerWidth/2)+'px'
-                tooltipInfo.classList.add('is-active')
-                tooltipInfo.innerHTML=intersect.object.text
-                infoActive = true
+            if(intersect.object.imageOk == true){
+                imgSrc.src = intersect.object.img
+                imageInfo.style.top = (((-1*p.y+1)*window.innerHeight/2)+40) + 'px'
+                imageInfo.style.left = (((p.x+1)*window.innerWidth/2)-150)+'px'
+                imageInfo.classList.add('is-active')
+                imageActive = true
             }
         }
 
     })
     if ((foundSprite == false && tooltipActive)){
         tooltip.classList.remove('is-active')
-        if(infoActive){
-            tooltipInfo.classList.remove('is-active')
+        if(imageActive){
+            imageInfo.classList.remove('is-active')
+            imageInfo.style.top = 0 + 'px'
+            imageInfo.style.left = 0 + 'px'
         }
     }
 

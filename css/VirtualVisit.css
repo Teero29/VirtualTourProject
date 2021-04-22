@@ -16,15 +16,11 @@
 }
 
 .info{
-    background: rgb(0, 0, 0);
-    color: white;
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 0px;
+    left: 0px;
     padding:10px;
     opacity:0;
-    transform : translate3d(-50%,-110%,0);
-    transition: opacity 0.3s;
 }
 .info.is-active{
     opacity: 1;
