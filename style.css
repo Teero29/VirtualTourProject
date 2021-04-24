@@ -101,6 +101,9 @@ a.cursus_link{
     margin-left: auto;
     margin-right: auto;
   }
+.rounded {
+    border-radius: 50%;
+}
 a.cursus_link:visited { color: #4d4d4d; }
 a.cursus_link:link { color: #4d4d4d; }
 
