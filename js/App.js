@@ -42,7 +42,7 @@ class Scene{
         this.pointsInfo.push(pointsInfo)
     }
     addInfo(pointsInfo){
-        let map = new THREE.TextureLoader().load( 'img/VirtualTour/info.jpg' );
+        let map = new THREE.TextureLoader().load( 'img/info.jpg' );
         let spritematerial = new THREE.SpriteMaterial( { map: map } );
         let sprite = new THREE.Sprite( spritematerial );
         sprite.name = pointsInfo.name
@@ -62,7 +62,7 @@ class Scene{
 
     }
     addArrow (pointsArrow) {
-        let map = new THREE.TextureLoader().load( 'img/VirtualTour/arrow.png' );
+        let map = new THREE.TextureLoader().load( 'img/arrow.png' );
         let spritematerial = new THREE.SpriteMaterial( { map: map } );
         let sprite = new THREE.Sprite( spritematerial );
         sprite.name = pointsArrow.name
@@ -131,12 +131,12 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, (window.innerHeight-taille))
 document.body.appendChild(renderer.domElement)
 
-let s1 = new Scene('img/compressed360/cour_Exterieure.jpg', camera)
-let s2 = new Scene('img/compressed360/hallEntree.jpg', camera)
-let s3 = new Scene('img/compressed360/escalier.jpg', camera)
-let s4 = new Scene('img/virtualTour/local11.jpg', camera)
-let s5 = new Scene('img/compressed360/local12.jpg', camera)
-let s6 = new Scene('img/compressed360/Cour_Interieure.jpg', camera)
+let s1 = new Scene('img/cour_Exterieure.jpg', camera)
+let s2 = new Scene('img/hallEntree.jpg', camera)
+let s3 = new Scene('img/escalier.jpg', camera)
+let s4 = new Scene('img/local11.jpg', camera)
+let s5 = new Scene('img/local12.jpg', camera)
+let s6 = new Scene('img/Cour_Interieure.jpg', camera)
 
 s1.addPointsArrow({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
