@@ -147,7 +147,7 @@ const questions = [{
     }
 ];
 
-const recordedAnswers = [];
+var recordedAnswers = [];
 
 
 const init = () => {
@@ -167,6 +167,7 @@ const init = () => {
     els.endBtn.addEventListener('click', () => {
         displayScreen('welcome');
         questionIndex = 0;
+        recordedAnswers = [];
     });
 
     els.answersContainer.addEventListener('click', ({ target }) => {
