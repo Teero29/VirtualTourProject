@@ -103,11 +103,10 @@ html, body {
     width:80%;
 }
 .tabCursus{
-	float:center;
-	margin-left: 0%;
+	margin-left: 28%;
 }
 a.cursus_link{
-     font-size:12px;
+     font-size:18px;
      text-decoration:none;
 }
 .center {
