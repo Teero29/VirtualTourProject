@@ -31,9 +31,11 @@ html, body {
 }
 
 .carousel-inner img {
-	width: 100%;
-	height: 100%;
+	width: 80%;
+    height: auto;
+    margin: auto;
 }
+
 
 .carousel-caption {
 	top: 50%;
