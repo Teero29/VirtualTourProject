@@ -85,10 +85,10 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	color: white;
-	background-color: #323131;
-	/*background-image: url(../img/background.jpg);*/
-
+	color: #000000;
+    /*text-shadow: 2px 2px 15px #000;*/
+	background-color: white;
+    background-image: url(https://live.staticflickr.com/341/31570755570_9bf0e36398_b.jpg);
 	background-size: cover;
 	background-position-x: center;
 }
