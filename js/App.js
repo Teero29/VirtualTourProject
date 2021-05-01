@@ -131,12 +131,12 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, (window.innerHeight-taille))
 document.body.appendChild(renderer.domElement)
 
-let s1 = new Scene('img/cour_Exterieure.jpg', camera)
-let s2 = new Scene('img/hallEntree.jpg', camera)
-let s3 = new Scene('img/escalier.jpg', camera)
-let s4 = new Scene('img/local11.jpg', camera)
-let s5 = new Scene('img/local12.jpg', camera)
-let s6 = new Scene('img/Cour_Interieure.jpg', camera)
+let s1 = new Scene('./img/cour_Exterieure.jpg', camera)
+let s2 = new Scene('./img/hallEntree.jpg', camera)
+let s3 = new Scene('./img/escalier.jpg', camera)
+let s4 = new Scene('./img/local11.jpg', camera)
+let s5 = new Scene('./img/local12.jpg', camera)
+let s6 = new Scene('./img/Cour_Interieure.jpg', camera)
 
 s1.addPointsArrow({position: new THREE.Vector3(48.530288176522504,  0.38881285381676156, -11.366902025238447),
         name: 'Entrée',
@@ -198,7 +198,7 @@ s1.addPointsInfo({
         'Les fondateurs de l\'école Provinciale des Mines du Hainaut ' +
         '1837',
 
-    img : 'img/virtualTour/statue.jpg',
+    img : './img/statue.jpg',
     imageOk : true
 })
 
