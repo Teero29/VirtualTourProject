@@ -2,283 +2,263 @@
 <html lang="fr">
 
 <head>
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<title>JPO</title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <title>JPO</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
 					class="navbar-toggler-icon"></span></button>
-			<div class="collapse navbar-collapse " id="navbarSupportedContent">
-				<ul class="nav ">
-					<li class="nav-pages">
-						<a class="nav-link" href="index.html">Accueil</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="visite_virtuelle.html">Visite virtuelle</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="choixpeau.html">Choixpeau</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="info_bachelier.html">Info bachelier</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="info_master.html">Info master</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="projets_réalisés.html">Projets réalisés</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="logements.html">Logements</a>
-					</li>
-					<li class="nav-pages">
-						<a class="nav-link" href="apropos.html">A Propos</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<hr>
-	<section>
-		<div id="slides" class="carousel slide" data-ride="carousel">
-			<ul class="carousel-indicators">
-				<li data-target="#slides" data-slide-to="0" class="active"></li>
-				<li data-target="#slides" data-slide-to="1"></li>
-				<li data-target="#slides" data-slide-to="2"></li>
-			</ul>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="d-flex justify-content-center">
-						<img src="img/background1.jpg">
-					</div>
-					<div class="carousel-caption">
-						<h1 class="display-2">Visite virtuelle</h1>
-						<h3>Découvrez votre futur campus !</h3>
-						<button type="button" class="btn btn-outline-light btn-lg"
-							onclick="location.href='visite_virtuelle.html'">Commencer la visite</button>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="d-flex justify-content-center">
-						<img src="img/background2.jpg">
-					</div>
-					<div class="carousel-caption">
-						<h1 class="display-2">Le choixpeau</h1>
-						<h3 id="a">De quelle maison faites-vous partie ?</h3>
-						<button type="button" class="btn btn-outline-light btn-lg"
-							onclick="location.href='choixpeau.html'">Commencer le test</button>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="d-flex justify-content-center">
-						<img src="img/background3.jpg">
-					</div>
-					<div class="carousel-caption">
-						<h1 class="display-2">Informations</h1>
-						<h3>Récoltez des informations</h3>
-						<button type="button" class="btn btn-outline-light btn-lg"
-							onclick="location.href='info_bachelier.html'">Info bachelier</button>
-						<button type="button" class="btn btn-outline-light btn-lg"
-							onclick="location.href='info_master.html'">Info master</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<hr>
-	<section>
-		<div class="index-section container-fluid">
-			<div class="col">
-				<h2 align="center">Bienvenus à la journée portes ouverte virtuelles de la faculté Polytechnique de Mons
-				</h2>
-				<hr>
-				<div>
-					<h3>Salut à toi, futur étudiant du supérieur!</h3>
-					<p> Je déduis par ta présence sur ce site que tu recherches à en savoir plus sur les études
-						d’ingénieur civil à la polytechnique. Je vais donc te donner quelques petites informations sur
-						le métier de l’ingénieur, pour que tu aies une meilleure idée d’où vont te mener ces études.
-						<br><br>Tout d’abord, qu’est-ce qu’un ingénieur ? Si tu poses cette question à google, tu
-						trouveras ça : <br><br><i>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="nav ">
+                    <li class="nav-pages">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="visite_virtuelle.html">Visite virtuelle</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="choixpeau.html">Choixpeau</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="info_bachelier.html">Info bachelier</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="info_master.html">Info master</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="projets_réalisés.html">Projets réalisés</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="logements.html">Logements</a>
+                    </li>
+                    <li class="nav-pages">
+                        <a class="nav-link" href="apropos.html">A Propos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <section>
+        <div id="slides" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/background1.jpg">
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Visite virtuelle</h1>
+                        <h3>Découvrez votre futur campus !</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='visite_virtuelle.html'">Commencer la visite</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/background2.jpg">
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Le choixpeau</h1>
+                        <h3 id="a">De quelle maison faites-vous partie ?</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='choixpeau.html'">Commencer le test</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/background3.jpg">
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Informations</h1>
+                        <h3>Récoltez des informations</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='info_bachelier.html'">Info bachelier</button>
+                        <button type="button" class="btn btn-outline-light btn-lg" onclick="location.href='info_master.html'">Info master</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="index-section container-fluid">
+            <div class="col">
+                <h2 align="center">Bienvenus à la journée portes ouverte virtuelles de la faculté Polytechnique de Mons
+                </h2>
+                <hr>
+                <div>
+                    <h3>Salut à toi, futur étudiant du supérieur!</h3>
+                    <p> Je déduis par ta présence sur ce site que tu recherches à en savoir plus sur les études d’ingénieur civil à la polytechnique. Je vais donc te donner quelques petites informations sur le métier de l’ingénieur, pour que tu aies une meilleure
+                        idée d’où vont te mener ces études.
+                        <br><br>Tout d’abord, qu’est-ce qu’un ingénieur ? Si tu poses cette question à google, tu trouveras ça : <br><br><i>
 							« Personne qui a reçu une formation scientifique et technique la rendant apte à diriger
-							certains travaux, à participer aux applications de la science. »</i><br><br>
-						Mouais… Personnellement je trouve que ça ne te renseigne pas trop sur le travail en lui-même.
-						Du coup, voici une meilleure définition (basée sur des témoignages) : <br><br><i>
+							certains travaux, à participer aux applications de la science. »</i><br><br> Mouais… Personnellement je trouve que ça ne te renseigne pas trop sur le travail en lui-même. Du coup, voici une meilleure définition (basée sur des témoignages) : <br><br><i>
 							« Personne qui a reçu de nombreux outils durant ses études pour lui permettre de résoudre
-							des problèmes complexes ou de travailler dans la recherche scientifique. » </i><br><br>
-						En gros, quand tu deviens ingénieur, tu sais réfléchir et régler des situations que les autres
-						auront beaucoup plus de mal à gérer (et ça c’est vraiment pas mal!).<br><br> Ou bien tu préfères
-						expérimenter et découvrir des trucs que personne n’avait encore jamais découvert (ça aussi c’est
-						vraiment pas mal!).<br><br>
-						De ce fait, pour arriver à ce niveau de compétence, tu vas devoir te former sur pleins de
-						domaines qui touche au domaine de l’ingénieur, ça c’est pendant le bachelier de 3 ans (même si
-						en vrai, en 3ème tu choisis déjà une option), et aussi sur des domaines plus spécifiques à ta
-						spécialité, ça c’est surtout en master.
-					</p>
-					<hr>
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="https://www.studyinbelgium.be/sites/default/files/styles/gallery/public/institutions/Umons3.jpg?itok=7aZGh8O6"
-								width="800" height="600" class="img-fluid">
-						</div>
-						<div class="col-lg-6" style="align-self: center; font-size: large">
-							<p><br>Voilà, maintenant que t’as une petite idée de l’ingénieur et du cursus qui t’attends,
-								promène toi dans les couloir de ta futur faculté et
-								prends toutes les informations que tu as besoin pour commencer au mieux ton
-								aventure.<br>
-							</p>
-							<p>Tu trouveras nottament des informations sur:<br><br>
-							</p>
-							<p>
-							<div class="divtabCursus">
-								<ul class="tabCursus">
-									<li>
-										<p>Les grilles de cours</p>
-									</li>
-									<li>
-										<p>les différents campus </p>
-									</li>
-									<li>
-										<p>les différentes options qui
-											s'offrent à toi en master</p>
-									</li>
-									<li>
-										<p>Les options de logement</p>
-									</li>
-									<li>
-										<p>Et bien plus encore...</p>
-									</li>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-	<hr>
-	<section>
-		<div class="index-section container-fluid">
-			<div class="row">
-				<div class="col-lg-6">
-					<h2 align="center">Où se situe la faculté ?</h2>
-					<p><br /> </p>
-					<p><br />Cliquer sur la map pour découvrir les lieux !</p>
-					<p>La Faculté Polytechnique de l’UMONS (Polytech Mons) forme des ingénieurs polytechniciens
-						innovants et ouverts au monde, depuis 1837! Elle délivre le diplôme de<strong> Master Ingénieur
+							des problèmes complexes ou de travailler dans la recherche scientifique. » </i><br><br> En gros, quand tu deviens ingénieur, tu sais réfléchir et régler des situations que les autres auront beaucoup plus de mal à gérer (et ça c’est vraiment pas
+                        mal!).
+                        <br><br> Ou bien tu préfères expérimenter et découvrir des trucs que personne n’avait encore jamais découvert (ça aussi c’est vraiment pas mal!).<br><br> De ce fait, pour arriver à ce niveau de compétence, tu vas devoir te former
+                        sur pleins de domaines qui touche au domaine de l’ingénieur, ça c’est pendant le bachelier de 3 ans (même si en vrai, en 3ème tu choisis déjà une option), et aussi sur des domaines plus spécifiques à ta spécialité, ça c’est surtout
+                        en master.
+                    </p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="https://www.studyinbelgium.be/sites/default/files/styles/gallery/public/institutions/Umons3.jpg?itok=7aZGh8O6" width="800" height="600" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6" style="align-self: center; font-size: large">
+                            <p><br>Voilà, maintenant que t’as une petite idée de l’ingénieur et du cursus qui t’attends, promène toi dans les couloir de ta futur faculté et prends toutes les informations que tu as besoin pour commencer au mieux ton aventure.
+                                <br>
+                            </p>
+                            <p>Tu trouveras nottament des informations sur:<br><br>
+                            </p>
+                            <p>
+                                <div class="divtabCursus">
+                                    <ul class="tabCursus">
+                                        <li>
+                                            <p>Les grilles de cours</p>
+                                        </li>
+                                        <li>
+                                            <p>les différents campus </p>
+                                        </li>
+                                        <li>
+                                            <p>les différentes options qui s'offrent à toi en master</p>
+                                        </li>
+                                        <li>
+                                            <p>Les options de logement</p>
+                                        </li>
+                                        <li>
+                                            <p>Et bien plus encore...</p>
+                                        </li>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <hr>
+    <section>
+        <div class="index-section container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 align="center">Où se situe la faculté ?</h2>
+                    <p><br /> </p>
+                    <p><br />Cliquer sur la map pour découvrir les lieux !</p>
+                    <p>La Faculté Polytechnique de l’UMONS (Polytech Mons) forme des ingénieurs polytechniciens innovants et ouverts au monde, depuis 1837! Elle délivre le diplôme de<strong> Master Ingénieur
 							civil
 							dans cinq spécialités : Chimie-Science des Matériaux, Électricité, Informatique et Gestion,
 							Mécanique et Mines et Géologie</strong> ainsi qu’un diplôme de Master Ingénieur civil
-						<strong>Architecte</strong><br><br>
-
-						Les larges connaissances scientifiques et les compétences transversales acquises durant le
-						cursus permettent aux jeunes ingénieurs formés à la Polytech d’exercer des<strong> métiers
+                        <strong>Architecte</strong><br><br> Les larges connaissances scientifiques et les compétences transversales acquises durant le cursus permettent aux jeunes ingénieurs formés à la Polytech d’exercer des<strong> métiers
 							extrêmement
-							diversifiés</strong> dans des environnements variés et stimulants. Tous les diplômes de
-						Polytech Mons
-						sont reconnus officiellement par l’Etat français et labellisés EUR-ACE au niveau européen.
-						L’employabilité et la mobilité internationale s’en trouvent encore renforcées.
-					</p>
-				</div>
-				<div class="col-lg-6 container1">
-					<p><iframe class="responsive-iframe" loading="lazy"
-							src="https://www.google.com/maps/d/embed?mid=1eKF1r58BbvHoW4hRg6OrZ1IuTqzsDgqH" width="640"
-							height="480"></iframe></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<hr>
-	<section>
-		<div class="index-section container-fluid padding" id="3">
-			<div class="row padding">
-				<div class="col-lg-6" id="cf3">
-					<h2 align="center">La FEDE!</h2>
-					<p>La FEDE (La Fédérale des étudiants) est composé d'un comité de cinq personnes. Ceux-ci sont des
-						étudiants de la FPMs qui ont été élus par l'ensemble des étudiants membres de la Fédération des
-						Etudiants.
-						Ses rôles sont les suivants:
-					<div class="divtabCursus">
-						<ul class="tabCursus">
-							<li>Prendre la majeure partie des décisions concernant la vie
-								estudiantine à la Faculté
-							</li>
-							<li>Gérer l'ensemble des cercles estudiantins, appelés 'cercles fédérés'
-							</li>
-							<li>Responsable des commissions</li>
-							<li>Responsable des bugdets cercles</li>
-						</ul>
-					</div>
-					</p>
-					<p>Voir <a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">site</a> pour plus
-						d'infos.</p>
-					<img src="img/Fede.png" class="img-fluid center">
-				</div>
-				<div class="col-lg-6" id="cf2">
-					<h2 align="center">Le BEP!</h2>
-					<p>Le BEP est composé de 8 étudiants et fait l’intermédiaire entre les autorités académiques (Mme La
-						Doyenne, Mme. La Vice-Doyenne ainsi que leurs équipes) et les étudiants.Ce sont vos
-						représentants au sein de la Faculté. Les rôles du BEP sont multiples et variés. Ils participent
-						notamment au Conseil de Faculté, assemblée composée des autorités académiques et d’une grande
-						partie du corps professoral qui se réunit tous les mois. Le BEP a la possibilité de donner son
-						avis sur les horaires d’examens, les réformes concernant nos études, etc. Les étudiants qui
-						composent le BEP ont également la possibilité de faire partie de Commissions. L’impact de sa
-						participation sur la vie universitaire est réel. Au sein du BEP, vous avez réellement
-						l’opportunité de faire changer les choses.
-					</p>
-					<p>Voir <a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">groupe Facebook</a> pour
-						plus
-						d'infos.</p>
-					<img src="img/logoBEP.jpg" class="img-fluid center">
-				</div>
-			</div>
-		</div>
-	</section>
-	<hr>
-	<footer>
-		<div class="container-fluid padding">
-			<div class="row text-center">
-				<div class="col-md-6">
-					<img class="img-responsive" src="img/logo1.png">
-					<hr class="light">
-					<p>Tél. : +32 (0)65 37 40 30</p>
-					<a href="mailto:info.polytech@umons.ac.be">
+							diversifiés</strong> dans des environnements variés et stimulants. Tous les diplômes de Polytech Mons sont reconnus officiellement par l’Etat français et labellisés EUR-ACE au niveau européen. L’employabilité et la mobilité internationale s’en
+                        trouvent encore renforcées.
+                    </p>
+                </div>
+                <div class="col-lg-6 container1">
+                    <p><iframe class="responsive-iframe" loading="lazy" src="https://www.google.com/maps/d/embed?mid=1eKF1r58BbvHoW4hRg6OrZ1IuTqzsDgqH" width="640" height="480"></iframe></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="index-section container-fluid padding">
+            <div class="row padding">
+                <div class="col-lg-6">
+                    <h3>Présentation de la Polytechnique de Mons</h3>
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8IKxvu_YNfo" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 align="center">ENG'UP</h2>
+                    <p>Au fil des cinq années de formation, la pédagogie se veut résolument active et les contacts avec le monde de l’entreprise, omniprésents. Ces activités, et bien d’autres encore, regroupées sous l’acronyme ENG’UP, poussent chaque étudiant
+                        à s’interroger sur sa future vie professionnelle et le conduisent à adopter le parcours de formation le mieux adapté à sa personnalité. La motivation s’accroît, ce qui permet à chacun de surmonter les difficultés d’une formation
+                        scientifique et technologique toujours exigeante.</p>
+                    <p>Cliquez sur le logo pour plus d'infos!</p>
+                    <a href="https://web.umons.ac.be/fpms/fr/etudes/engup/"><img src="https://web.umons.ac.be/app/uploads/sites/6/2017/07/logo-engup20bleu-fpms1-150x150.jpg" class="img-fluid center"></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="index-section container-fluid padding" id="3">
+            <div class="row padding">
+                <div class="col-lg-6" id="cf3">
+                    <h2 align="center">La FEDE!</h2>
+                    <p>La FEDE (La Fédérale des étudiants) est composé d'un comité de cinq personnes. Ceux-ci sont des étudiants de la FPMs qui ont été élus par l'ensemble des étudiants membres de la Fédération des Etudiants. Ses rôles sont les suivants:
+                        <div class="divtabCursus">
+                            <ul class="tabCursus">
+                                <li>Prendre la majeure partie des décisions concernant la vie estudiantine à la Faculté
+                                </li>
+                                <li>Gérer l'ensemble des cercles estudiantins, appelés 'cercles fédérés'
+                                </li>
+                                <li>Responsable des commissions</li>
+                                <li>Responsable des bugdets cercles</li>
+                            </ul>
+                        </div>
+                    </p>
+                    <p>Voir <a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">site</a> pour plus d'infos.
+                    </p>
+                    <img src="img/Fede.png" class="img-fluid center">
+                </div>
+                <div class="col-lg-6" id="cf2">
+                    <h2 align="center">Le BEP!</h2>
+                    <p>Le BEP est composé de 8 étudiants et fait l’intermédiaire entre les autorités académiques (Mme La Doyenne, Mme. La Vice-Doyenne ainsi que leurs équipes) et les étudiants.Ce sont vos représentants au sein de la Faculté. Les rôles du
+                        BEP sont multiples et variés. Ils participent notamment au Conseil de Faculté, assemblée composée des autorités académiques et d’une grande partie du corps professoral qui se réunit tous les mois. Le BEP a la possibilité de donner
+                        son avis sur les horaires d’examens, les réformes concernant nos études, etc. Les étudiants qui composent le BEP ont également la possibilité de faire partie de Commissions. L’impact de sa participation sur la vie universitaire
+                        est réel. Au sein du BEP, vous avez réellement l’opportunité de faire changer les choses.
+                    </p>
+                    <p>Voir <a href="https://fede.fpms.ac.be/site_fede/pages/index/index.php">groupe Facebook</a> pour plus d'infos.
+                    </p>
+                    <img src="img/logoBEP.jpg" class="img-fluid center">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/logo1.png">
+                    <hr class="light">
+                    <p>Tél. : +32 (0)65 37 40 30</p>
+                    <a href="mailto:info.polytech@umons.ac.be">
 						Envoyer un e-mail
 					</a>
-					<p>9, Rue de Houdain</p>
-				</div>
-				<div class="col-md-6">
-					<img class="img-responsive" src="img/logo2.png">
-					<hr class="light">
-					<p>Tél. : +32 (0)65 37 31 11</p>
-					<a href="mailto:info.mons@umons.ac.be">
+                    <p>9, Rue de Houdain</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/logo2.png">
+                    <hr class="light">
+                    <p>Tél. : +32 (0)65 37 31 11</p>
+                    <a href="mailto:info.mons@umons.ac.be">
 						Envoyer un e-mail
 					</a>
-					<p>20, Place du Parc</p>
-				</div>
-				<div class="col-12">
-					<hr class="light">
-					<h5>&copy; JPOdelapolytech.com</h5>
-				</div>
-			</div>
-		</div>
-	</footer>
+                    <p>20, Place du Parc</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light">
+                    <h5>&copy; JPOdelapolytech.com</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

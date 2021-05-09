@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-
-html, body {
-	height: 100%;
-	width: 100%;
-	font-family: 'Poppins', sans-se-serif;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-se-serif;
 }
+
 .responsive-iframe {
     position: absolute;
     top: 0;
@@ -14,132 +14,149 @@ html, body {
     right: 0;
     width: 100%;
     height: 100%;
-  }
-  .container1 {
+}
+
+.container1 {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 30.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  }
+    padding-top: 30.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
 .navbar {
-	padding: .12rem;
+    padding: .12rem;
 }
 
 .nav-link {
-	font-size: 1.1em !important;
-	color:#024887;
+    font-size: 1.1em !important;
+    color: #024887;
 }
 
 .carousel-inner img {
-	width: 100%;
+    width: 100%;
     height: 80%;
     margin: -10%;
     overflow: hidden;
     display: block;
 }
 
-
 .carousel-caption {
-	top: 50%;
-	transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .carousel-caption h1 {
-	font-size: 500%;
-	text-transform : uppercase;
-	text-shadow: 1px 1px 10px #000;	
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000;
 }
 
 .carousel-caption h3 {
-	font-size: 200%;
-	font-weight : 500;
-	text-shadow: 1px 1px 10px #000;
-	padding-bottom: 1rem;
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000;
+    padding-bottom: 1rem;
 }
+
 .btn-outline-light {
-	color:#024887;
-	background:#A5BEE0;
+    color: #024887;
+    background: #A5BEE0;
 }
+
 .navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
 }
+
 .navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .welcome-screen,
 .question-screen,
 .end-screen {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: #000000;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
     text-shadow: 2px 2px 15px #f4f4f4;
-	background-color: white;
+    background-color: white;
     background-image: url(https://live.staticflickr.com/341/31570755570_9bf0e36398_b.jpg);
-	background-size: cover;
-	background-position-x: center;
+    background-size: cover;
+    background-position-x: center;
 }
 
 .welcome-screen {
-	flex-direction: column;
-
+    flex-direction: column;
 }
 
 .question-screen,
 .end-screen {
-	display: none;
+    display: none;
 }
-.tabCursus
-{
-    width:80%;
+
+.tabCursus {
+    width: 80%;
 }
-.tabCursus{
-	margin-left: 10%;
+
+.tabCursus {
+    margin-left: 10%;
 }
-a.cursus_link{
-     font-size:18px;
-     text-decoration:none;
+
+a.cursus_link {
+    font-size: 18px;
+    text-decoration: none;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
+
 .rounded {
     border-radius: 50%;
 }
-a.cursus_link:visited { color: #4d4d4d; }
-a.cursus_link:link { color: #4d4d4d; }
+
+a.cursus_link:visited {
+    color: #4d4d4d;
+}
+
+a.cursus_link:link {
+    color: #4d4d4d;
+}
 
 .index-section h2 {
     font-family: Arial, Verdana;
     font-weight: 800;
     font-size: 2.5rem;
-    color:#024887;
+    color: #024887;
     text-transform: uppercase;
 }
-.accordion-section .panel-default > .panel-heading {
+
+.accordion-section .panel-default>.panel-heading {
     border: 0;
     background: #f4f4f4;
     padding: 0;
 }
+
 .accordion-section .panel-default .panel-title a {
     display: block;
     font-size: 1.5rem;
 }
+
 .accordion-section .panel-default .panel-title a::after {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
@@ -149,13 +166,16 @@ a.cursus_link:link { color: #4d4d4d; }
     float: right;
     margin-top: -12px;
 }
+
 .accordion-section .panel-default .panel-title a.collapsed::after {
     content: "\f107";
 }
+
 .accordion-section .panel-default .panel-body {
     font-size: 1.2rem;
 }
 
-.col-lg-6 cf1,cf2{
-    background-color:#A5BEE0;
+.col-lg-6 cf1,
+cf2 {
+    background-color: #A5BEE0;
 }
